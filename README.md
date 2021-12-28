@@ -1,3 +1,36 @@
+2021/12/28
+要修改 hyp.py中：point_num   anchors：
+
+车牌训练文件 train.txt
+ 主要来自 ccpd 的
+/data/pic/car/rotate/1640240237141.jpg
+/data/pic/car/rotate/1640240161957.jpg
+/data/pic/car/rotate/1640240399069.jpg
+/data/pic/car/rotate/1640240266211.jpg
+
+0 0.7056 0.4422 0.2819 0.1241 0.8472 0.5043 0.5694 0.4534 0.5653 0.3802 0.8431 0.431
+
+python train.py --net mbv3_small_1_light  --batch-size 128   >00tralog.txt 2>&1 &
+
+
+
+onnx   --->  onnx/cconver_to_onnx.py     
+python -m   onnxsim 
+
+
+python  demo.py
+
+ncnn  接口函数 
+carplate( int idx,unsigned char *psrc,int img_w,int img_h,Plateparam  wtpara)
+后处理:
+yolodecode4
+
+
+
+
+
+
+
 # yolo-face-with-landmark
 
 ### 实现的功能
